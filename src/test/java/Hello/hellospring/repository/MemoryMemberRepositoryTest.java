@@ -59,6 +59,6 @@ public class MemoryMemberRepositoryTest {   //테스트할 코드와 패키지�
 
         List<Member> result = repository.findAll();
 
-        assertThat(result.size()).isEqualTo(3);
+        assertThat(result.size()).isEqualTo(2);
     }
 }
