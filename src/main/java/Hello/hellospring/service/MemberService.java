@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepo memberRepo  = new MemoryMemberRepository();
+    private final MemberRepo memberRepo;
+
+    public MemberService(MemberRepo memberRepo) {
+        this.memberRepo = memberRepo;
+    }
 
 
     /*
