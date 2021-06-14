@@ -7,6 +7,7 @@ public class MemberForm {   //DTO 클래스
         return name;
     }
 
+
     public void setName(String name) {
         this.name = name;
     }
