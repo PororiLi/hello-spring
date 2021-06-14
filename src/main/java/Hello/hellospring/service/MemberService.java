@@ -3,13 +3,19 @@ package Hello.hellospring.service;
 import Hello.hellospring.domain.Member;
 import Hello.hellospring.repository.MemberRepo;
 import Hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service    //실제로는 컴포넌트임. 서비스가 컴포넌트를 포함하기 때문.
+@Component
 public class MemberService {
     private final MemberRepo memberRepo;
 
+    @Autowired
     public MemberService(MemberRepo memberRepo) {
         this.memberRepo = memberRepo;
     }
