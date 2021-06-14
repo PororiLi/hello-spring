@@ -10,12 +10,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service    //실제로는 컴포넌트임. 서비스가 컴포넌트를 포함하기 때문.
-@Component
+
 public class MemberService {
     private final MemberRepo memberRepo;
 
-    @Autowired
     public MemberService(MemberRepo memberRepo) {
         this.memberRepo = memberRepo;
     }

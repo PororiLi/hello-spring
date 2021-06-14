@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
+
 public class MemoryMemberRepository implements MemberRepo {
 
     private static Map<Long, Member> store = new HashMap<>();   //실무에서는 공유되는 문제 때문에 컨커런트해시맵 써야함.
