@@ -16,6 +16,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'	//html 탬플릿 엔진
 	implementation 'org.springframework.boot:spring-boot-starter-web'	//웹 프로젝트 실행 하는 거
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	runtimeOnly 'com.h2database:h2'	//디비랑 붙을 때 데이터 베이스가 제공하는 클라이언트 필요한데 그거
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
