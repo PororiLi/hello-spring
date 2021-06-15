@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+//순수 테스트. 단위 테스트
 class MemberServiceTest {
     MemberService memberService;
 //    MemoryMemberRepository memoryMemberRepository = new MemoryMemberRepository();   //다른 객체 리포지토리 생성 하는 것 보다 좋은 방법 있음.
