@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 //스프링 통합 테스트
 @SpringBootTest
-@Transactional    //트랜잭션 넣어주면 테스트를 실행하고 테스트가 끝나면 롤백을 해줌. 그래서 디비에 넣었던 데이터는 반영안되고 지워짐.
+@Transactional    //테스트에 트랜잭션 넣어주면 테스트를 실행하고 테스트가 끝나면 롤백을 해줌. 그래서 디비에 넣었던 데이터는 반영안되고 지워짐.
 public class MemberServiceIntegrationTest {
 
     @Autowired MemberService memberService;
