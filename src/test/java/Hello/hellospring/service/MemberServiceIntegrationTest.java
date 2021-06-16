@@ -39,10 +39,10 @@ public class MemberServiceIntegrationTest {
     public void 중복회원예외() {  //테스트 케이스의 핵심은 정상 플로우 확인 뿐 아니라 예외 상황 찾는것.
         //given
         Member member1 = new Member();
-        member1.setName("spring");
+        member1.setName("spring2");
 
         Member member2 = new Member();
-        member2.setName("spring");
+        member2.setName("spring2");
 
         //when
         memberService.join(member1);
