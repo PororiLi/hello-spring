@@ -59,17 +59,13 @@ class MemberServiceTest {
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2)); //더 유용한 에러 캐치 문법.
         assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다."); //이렇게 메시지 검증.
 
-//        try{
-//            memberService.join(member2);
-//        } catch (IllegalStateException e) {
-//            assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.123453");
-//        } //트라이 캐치로 예외 처리 할 수 있지만 좀 애매함. 그래서 다른 문법 제공
-
 
         //then
     }
 
     @Test
+
+
     void findMembers() {
     }
 
