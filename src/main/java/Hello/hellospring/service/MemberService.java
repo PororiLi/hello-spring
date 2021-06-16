@@ -6,11 +6,12 @@ import Hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
-
+@Transactional  //jpa를 사용할 때는 항상 트랜젝션이 있어야함.
 public class MemberService {
     private final MemberRepo memberRepo;
 
