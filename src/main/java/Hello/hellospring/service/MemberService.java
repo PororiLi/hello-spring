@@ -25,28 +25,13 @@ public class MemberService {
     * */
     public Long join(Member member) {
         //같은 이름이 있는 중복 회원 x.
-        long start = System.currentTimeMillis();
 
-        try {
-            validateDuplicateMember(member);    // 중복 회원 검증.
-            memberRepo.save(member);
-            return member.getId();
-        } finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-            System.out.println(timeMs);
-        }
-
-
+        validateDuplicateMember(member);    // 중복 회원 검증.
+        memberRepo.save(member);
+        return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {
-        //        Optional<Member> result = memberRepo.findByName(member.getName());
-//        result.ifPresent(m -> {
-//            throw new IllegalStateException("이미 존재하는 회원입니다.");
-//        }); //null 일 수 있는 값을 optional 로 받아서 반환
-
-
         memberRepo.findByName(member.getName())
             .ifPresent(m -> {
                 throw new IllegalStateException("이미 존재하는 회원입니다.");
@@ -58,14 +43,8 @@ public class MemberService {
     *
     * */
     public List<Member> findMembers() {
-        long start = System.currentTimeMillis();
-        try {
-            return memberRepo.findAll();
-        } finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-            System.out.println(timeMs);
-        }
+        return memberRepo.findAll();
+
     }
 
     public Optional<Member> findOne(Long memberId) {
